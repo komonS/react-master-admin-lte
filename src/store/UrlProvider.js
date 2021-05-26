@@ -3,12 +3,12 @@ export const UrlContext = createContext({})
 
 
 const initialState = {
-    url:"http://10.20.30.27:3000/",
-    ldap:"http://sciintra/sci-api/ldap/api/",
-    host:"http://10.20.30.27/meeting-back-end-master/",
-    url_pm:"http://10.20.30.27:3005/",
-    host_pm:"http://10.20.31.27:8181/ProjectManagement/",
-    flow:"http://localhost/workflow/api/"
+    url:"",
+    ldap:"",
+    host:"",
+    url_pm:"",
+    host_pm:"",
+    flow:""
 }
 
 
