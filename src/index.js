@@ -3,10 +3,24 @@ import ReactDOM from 'react-dom';
 import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
-
+import { HashRouter as Router } from "react-router-dom";
+import { MenuProvider } from './store/MenuProvider';
+import { LoginProvider } from './store/LoginProvider'
+import { UrlProvider } from './store/UrlProvider'
+import { UserProvider } from './store/UserProvider'
 ReactDOM.render(
   <React.StrictMode>
-    <App />
+    <UserProvider>
+      <UrlProvider>
+        <LoginProvider>
+          <MenuProvider>
+            <Router>
+              <App />
+            </Router>
+          </MenuProvider>
+        </LoginProvider>
+      </UrlProvider>
+    </UserProvider>
   </React.StrictMode>,
   document.getElementById('root')
 );
